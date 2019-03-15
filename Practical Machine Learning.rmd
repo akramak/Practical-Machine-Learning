@@ -1,8 +1,10 @@
 ---
 title: "Practical Machine Learning"
 output:
-  word_document: default
+  html_document:
+    df_print: paged
   pdf_document: default
+  word_document: default
 ---
 
 ```{r setup, include=FALSE}
@@ -63,5 +65,13 @@ confusionMatrix(predictions,T1$classe)
 
 predictions = predict(forest, newdata=Train6)
 confusionMatrix(predictions,Train6$classe)
+
 ```
 The accuracy of our random Forest model is 99.3%, we then apply it to our full data.
+
+## Test Results
+
+```{r}
+predictions = predict(forest, newdata=Test)
+predictions
+```

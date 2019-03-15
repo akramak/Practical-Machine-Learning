@@ -527,6 +527,14 @@ confusionMatrix(predictions,Train6$classe)</code></pre>
 ## Balanced Accuracy      1.0000   1.0000   1.0000   1.0000   1.0000</code></pre>
 <p>The accuracy of our random Forest model is 99.3%, we then apply it to our full data.</p>
 </div>
+<div id="test-results" class="section level2">
+<h2>Test Results</h2>
+<pre class="r"><code>predictions = predict(forest, newdata=Test)
+predictions</code></pre>
+<pre><code>##  1  2  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 
+##  B  A  B  A  A  E  D  B  A  A  B  C  B  A  E  E  A  B  B  B 
+## Levels: A B C D E</code></pre>
+</div>
 
 
 
